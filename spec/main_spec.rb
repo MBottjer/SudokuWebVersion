@@ -4,11 +4,11 @@ describe 'this game' do
 
   it 'selects 40 numbers at random from an array' do
     array = double :array
-    expect(array).to receive(:sample).with(40)
-    array.sample(40)
+    range = double :range
+    expect(Range).to receive(:new).with(0,80).and_return(range)
+    expect(range).to receive(:to_a).and_return array
+    expect(array).to receive(:sample).with(40).and_return []
+    puzzle([])
   end
 
-  it 'can replace random elements in an array with spaces' do
-    
-  end
 end

@@ -18,3 +18,10 @@ body {
   font-family: Arial;
 }
 
+.incorrect {
+  background: yellow;
+}
+
+.value-provided { 
+  background: #DDD; 
+}
