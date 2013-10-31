@@ -1,6 +1,10 @@
 require 'sinatra'
+require 'sinatra/partial' 
 require_relative './lib/sudoku'
 require_relative './lib/cell'
+
+register Sinatra::Partial 
+set :partial_template_engine, :erb
 
 enable :sessions
 
@@ -20,10 +24,14 @@ enable :sessions
 
 def generate_new_puzzle_if_necessary
   return if session[:current_solution]
+  new_game 
+end
+
+def new_game
   sudoku = random_sudoku
   session[:solution] = sudoku
   session[:puzzle] = puzzle(sudoku)
-  session[:current_solution] = session[:puzzle]    
+  session[:current_solution] = session[:puzzle]  
 end
 
 def prepare_to_check_solution
@@ -34,6 +42,7 @@ end
 helpers do 
 
   def colour_class(solution_to_check, puzzle_value, current_solution_value, solution_value)
+
     must_be_guessed = puzzle_value == 0
     tried_to_guess = current_solution_value.to_i != 0
     guessed_incorrectly = current_solution_value != solution_value 
@@ -74,8 +83,17 @@ get '/' do
   erb :index
 end
 
+get '/new_game' do 
+  puts "got to new game"
+  new_game
+  redirect to('/')
+end
+
+
 get '/solution' do 
   @current_solution = session[:solution]
+  @solution = @current_solution
+  @puzzle = session[:puzzle]
   erb :index
 end
 
