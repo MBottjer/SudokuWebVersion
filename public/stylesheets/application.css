@@ -38,21 +38,48 @@ button {
     font-size:14px;
     font-weight:700;
     border-radius:10px;
-}
+    font-family: 'IM Fell English SC', serif;
+    cursor: pointer;
+  }
 
 #check { 
-    margin-left: 20px;
-    margin-top: 1px;   
+    margin-left: 0px;
+    margin-top: 2px;
+    font-size:20px;
+    font-weight:700; 
+    opacity: 0.8;  
 }
 
 #new {
-    margin-left: -195px;
-    margin-top: -24px;  
+    float: left;
+    margin-top: -337px;
+    font-size:40px;
+    font-weight:200;
+    background-color: transparent;
 }
 
 #solution {
-    margin-left: 220px;
-    margin-top: -24px;  
+    float: left;
+    margin-top: -150px;
+    font-size:25px;
+    font-weight:400;
+    background-color: transparent;
+}
+
+#hard {
+    float: left;
+    margin-top: -257px;
+    font-size:40px;
+    font-weight:200;
+    background-color: transparent;
+}
+
+#medium {
+    float:left;
+    margin-top: -297px;
+    font-size:40px;
+    font-weight:200;
+    background-color: transparent;;
 }
 
 h1 {

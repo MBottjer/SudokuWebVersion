@@ -11,29 +11,29 @@ set :session_secret, "I'm the secret key to sign the cookie"
 
 enable :sessions
 
-  def random_sudoku
-    seed = (1..9).to_a.shuffle + Array.new(81-9,0)
-    sudoku = Sudoku.new(seed.join)
-    sudoku.solve!
-    sudoku.to_s.chars
-  end
+def random_sudoku
+  seed = (1..9).to_a.shuffle + Array.new(81-9,0)
+  sudoku = Sudoku.new(seed.join)
+  sudoku.solve!
+  sudoku.to_s.chars
+end
 
-  def puzzle sudoku
-    the_puzzle = sudoku.dup
-    array = Range.new(0,80).to_a.sample(40)
-    array.each {|number| the_puzzle[number] = 0}
-    the_puzzle 
-  end
+def puzzle sudoku, number 
+  the_puzzle = sudoku.dup
+  array = Range.new(0,80).to_a.sample(number)
+  array.each {|number| the_puzzle[number] = 0}
+  the_puzzle
+end
 
 def generate_new_puzzle_if_necessary
   return if session[:current_solution]
-  new_game 
+  new_game 45
 end
 
-def new_game
+def new_game difficulty 
   sudoku = random_sudoku
   session[:solution] = sudoku
-  session[:puzzle] = puzzle(sudoku)
+  session[:puzzle] = puzzle(sudoku, difficulty)
   session[:current_solution] = session[:puzzle]  
 end
 
@@ -90,17 +90,30 @@ get '/' do
 end
 
 get '/new_game' do 
-  puts "got to new game"
-  new_game
+  new_game 30
   redirect to('/')
 end
 
+get '/medium_game' do 
+  new_game 45
+  redirect to('/')
+end
+
+get '/hard_new_game' do
+  new_game 60
+  redirect to('/')
+end
 
 get '/solution' do 
   @current_solution = session[:solution]
   @solution = @current_solution
   @puzzle = session[:puzzle]
   erb :index
+end
+
+get '/reset' do 
+  session[:current_solution] = session[:puzzle]
+  redirect to('/')
 end
 
 post '/' do
