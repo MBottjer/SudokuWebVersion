@@ -1,6 +1,7 @@
 require 'sinatra'
+require 'newrelic_rpm'
 require 'sinatra/partial'
-require 'rack-flash' 
+require 'rack-flash'
 require_relative './lib/sudoku'
 require_relative './lib/cell'
 
