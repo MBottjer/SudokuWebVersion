@@ -11,4 +11,6 @@ gem "shotgun"
 
 gem 'newrelic_rpm'
 
+gem 'unicorn'
+
 # gem "rails"
