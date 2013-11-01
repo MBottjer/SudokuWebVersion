@@ -9,4 +9,6 @@ gem 'sinatra-partial'
 
 gem "shotgun"
 
+gem 'newrelic_rpm'
+
 # gem "rails"
