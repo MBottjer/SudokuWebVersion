@@ -479,3 +479,35 @@
 [11/03/13 16:19:50 +0000 Michael-Bs-MacBook-Pro.local (9969)] INFO : Detected Unicorn, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
 [11/03/13 16:19:50 +0000 Michael-Bs-MacBook-Pro.local (9969)] INFO : Finished instrumentation
 [11/03/13 16:19:50 +0000 Michael-Bs-MacBook-Pro.local (9969)] INFO : Doing deferred dependency-detection before Rack startup
+[11/03/13 19:35:34 +0000 Michaels-MacBook-Pro.local (1227)] INFO : Starting the New Relic agent in "development" environment.
+[11/03/13 19:35:34 +0000 Michaels-MacBook-Pro.local (1227)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[11/03/13 19:35:34 +0000 Michaels-MacBook-Pro.local (1227)] INFO : Reading configuration from config/newrelic.yml
+[11/03/13 19:35:34 +0000 Michaels-MacBook-Pro.local (1227)] INFO : Enabling the Request Sampler.
+[11/03/13 19:35:34 +0000 Michaels-MacBook-Pro.local (1227)] INFO : Enabling the Request Sampler.
+[11/03/13 19:35:34 +0000 Michaels-MacBook-Pro.local (1227)] INFO : Environment: development
+[11/03/13 19:35:34 +0000 Michaels-MacBook-Pro.local (1227)] INFO : Dispatcher: unicorn
+[11/03/13 19:35:34 +0000 Michaels-MacBook-Pro.local (1227)] INFO : Application: My Application
+[11/03/13 19:35:34 +0000 Michaels-MacBook-Pro.local (1227)] WARN : Agent configured not to send data in this environment.
+[11/03/13 19:35:34 +0000 Michaels-MacBook-Pro.local (1227)] INFO : Installing Net instrumentation
+[11/03/13 19:35:34 +0000 Michaels-MacBook-Pro.local (1227)] INFO : Installing Sinatra instrumentation
+[11/03/13 19:35:34 +0000 Michaels-MacBook-Pro.local (1227)] INFO : Installing deferred Rack instrumentation
+[11/03/13 19:35:34 +0000 Michaels-MacBook-Pro.local (1227)] INFO : Installing Unicorn instrumentation
+[11/03/13 19:35:34 +0000 Michaels-MacBook-Pro.local (1227)] INFO : Detected Unicorn, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[11/03/13 19:35:34 +0000 Michaels-MacBook-Pro.local (1227)] INFO : Finished instrumentation
+[11/03/13 19:35:34 +0000 Michaels-MacBook-Pro.local (1227)] INFO : Doing deferred dependency-detection before Rack startup
+[11/03/13 19:36:45 +0000 Michaels-MacBook-Pro.local (1246)] INFO : Starting the New Relic agent in "development" environment.
+[11/03/13 19:36:45 +0000 Michaels-MacBook-Pro.local (1246)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[11/03/13 19:36:45 +0000 Michaels-MacBook-Pro.local (1246)] INFO : Reading configuration from config/newrelic.yml
+[11/03/13 19:36:45 +0000 Michaels-MacBook-Pro.local (1246)] INFO : Enabling the Request Sampler.
+[11/03/13 19:36:45 +0000 Michaels-MacBook-Pro.local (1246)] INFO : Enabling the Request Sampler.
+[11/03/13 19:36:45 +0000 Michaels-MacBook-Pro.local (1246)] INFO : Environment: development
+[11/03/13 19:36:45 +0000 Michaels-MacBook-Pro.local (1246)] INFO : Dispatcher: unicorn
+[11/03/13 19:36:45 +0000 Michaels-MacBook-Pro.local (1246)] INFO : Application: My Application
+[11/03/13 19:36:45 +0000 Michaels-MacBook-Pro.local (1246)] WARN : Agent configured not to send data in this environment.
+[11/03/13 19:36:45 +0000 Michaels-MacBook-Pro.local (1246)] INFO : Installing Net instrumentation
+[11/03/13 19:36:45 +0000 Michaels-MacBook-Pro.local (1246)] INFO : Installing Sinatra instrumentation
+[11/03/13 19:36:45 +0000 Michaels-MacBook-Pro.local (1246)] INFO : Installing deferred Rack instrumentation
+[11/03/13 19:36:45 +0000 Michaels-MacBook-Pro.local (1246)] INFO : Installing Unicorn instrumentation
+[11/03/13 19:36:45 +0000 Michaels-MacBook-Pro.local (1246)] INFO : Detected Unicorn, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[11/03/13 19:36:45 +0000 Michaels-MacBook-Pro.local (1246)] INFO : Finished instrumentation
+[11/03/13 19:36:45 +0000 Michaels-MacBook-Pro.local (1246)] INFO : Doing deferred dependency-detection before Rack startup
